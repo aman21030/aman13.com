@@ -11,3 +11,26 @@ Text Domain: aman13.com
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 */
+
+header {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 1000px;
+}
+
+h1 {
+    margin: 0;
+}
+
+.nav-global {
+    margin: 0 auto;
+    width: 1000px;
+}
+
+.nav-global ul {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+}
