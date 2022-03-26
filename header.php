@@ -22,4 +22,9 @@
 		<?php wp_nav_menu( array( 'theme_location' => 'global' )); ?>
 	<?php endif; ?>
 </nav>
-<?php echo do_shortcode( '[wp-structuring-markup-breadcrumb]' );
+<nav class="nav-breadcrumb">
+	<?php echo do_shortcode( '[wp-structuring-markup-breadcrumb]' ); ?>
+</nav>
+<div class="l-wrapper">
+	<?php get_sidebar( 'sidebar-1' ); ?>
+	<main>

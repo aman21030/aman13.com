@@ -30,3 +30,16 @@ function theme_styles( $version ) {
 	wp_enqueue_style( 'theme-style', get_stylesheet_uri(), array( 'theme-reset' ), $version );
 }
 add_action( 'wp_enqueue_scripts', 'theme_scripts' );
+
+function theme_widgets_init() {
+	register_sidebar( array(
+        'name'          => 'Main Sidebar',
+        'id'            => 'sidebar-1',
+        'description'   => 'メインで使うサイドバー',
+        'before_widget' => '<li id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</li>',
+		'before_title'  => '<h2 class="widgettitle">',
+		'after_title'   => '</h2>',
+    ) );
+}
+add_action( 'widgets_init', 'theme_widgets_init' );

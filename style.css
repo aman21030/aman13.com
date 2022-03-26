@@ -24,7 +24,7 @@ h1 {
     margin: 0;
 }
 
-.nav-global {
+.nav-global,.nav-breadcrumb,.l-wrapper {
     margin: 0 auto;
     width: 1000px;
 }
@@ -33,4 +33,9 @@ h1 {
     display: flex;
     justify-content: space-between;
     list-style: none;
+}
+
+.l-wrapper {
+    display: flex;
+    justify-content: space-between;
 }
