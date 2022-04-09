@@ -2,6 +2,8 @@
 
 get_header();
 
+echo get_search_query();
+
 if ( have_posts() ) :
     echo '<ul>' , PHP_EOL;
     while ( have_posts() ) : the_post(); ?>
@@ -13,6 +15,8 @@ if ( have_posts() ) :
         </li>
     <?php endwhile;
     echo '</ul>' , PHP_EOL;
+else :
+    echo '見つかりませんでした。。。';
 endif;
 
 the_posts_pagination( array(

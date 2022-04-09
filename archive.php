@@ -3,6 +3,8 @@
 get_header();
 
 if ( have_posts() ) :
+    the_archive_title();
+    the_archive_description();
     echo '<ul>' , PHP_EOL;
     while ( have_posts() ) : the_post(); ?>
         <li>
