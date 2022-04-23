@@ -19,6 +19,7 @@
             <p>aman901030</p>
         </a>
     </div>
+    <p><small>&copy;&nbsp;<?php bloginfo( 'name' ); ?>&nbsp;All&nbsp;rights&nbsp;reserved.</small></p>
 </footer>
 <?php wp_footer(); ?>
 </body>
