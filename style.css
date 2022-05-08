@@ -112,21 +112,24 @@ main img {
 
 footer {
     background-color: #223a70;
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    padding: 10px;
 }
 .icon-area {
+    display: flex;
+    justify-content: space-around;
     margin: 0 50px;
+    padding: 0 20%;
+    text-align: center;
 }
 .footer-icon {
     font-size: 40px;
+    padding: 10px;
 }
 footer a {
     color: azure;
 }
 footer p {
+    color: azure;
     margin: 0;
     padding: 10px;
+    text-align: center;
 }
