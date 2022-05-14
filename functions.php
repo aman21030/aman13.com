@@ -24,6 +24,10 @@ add_action( 'after_setup_theme', 'theme_setup' );
 function theme_scripts() {
 	$version = wp_get_theme()->get( 'Version' );
 	theme_styles( $version );
+	// Comment Reply.
+	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
+		wp_enqueue_script( 'comment-reply' );
+	}
 }
 function theme_styles( $version ) {
 	wp_enqueue_style( 'theme-reset', get_template_directory_uri() . '/reset.css', array(), $version );
