@@ -12,7 +12,7 @@ if ( have_posts() ) :
         <div class="article">
             <?php the_post_thumbnail( 'full', printf( '<a href="%s">', get_permalink() ), '</a>' ); ?>
             <time><?php the_time( get_option( 'date_format' ) . ' ' . get_option( 'time_format' ) ); ?></time>
-            <?php the_title( printf( '<a href="%s"><h2>', get_permalink() ), '</h2></a>' ); ?>
+            <?php the_title( sprintf( '<a href="%s"><h2>', get_permalink() ), '</h2></a>' ); ?>
         </div>
         </li>
     <?php endwhile;
