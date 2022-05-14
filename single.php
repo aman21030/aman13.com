@@ -11,8 +11,10 @@ if ( have_posts() ) : ?>
     <?php the_content(); ?>
     </article>
 <?php endif;
-
+echo '<div class="pagenation">';
 previous_post_link();
+echo '<span class="pagenation-space"></span>';
 next_post_link();
+echo '</div>';
 
 get_footer();
