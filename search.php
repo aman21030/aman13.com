@@ -7,14 +7,16 @@ get_header();
 echo '<label class="category">', get_search_query(), '</label>';
 
 if ( have_posts() ) :
-    echo 'の検索の結果<ul>' , PHP_EOL;
+    if ( !empty( get_search_query() ) ) {
+        echo 'の検索の結果（' . $wp_query->found_posts . '件）';
+    }
+    echo '<ul>' , PHP_EOL;
     while ( have_posts() ) : the_post(); ?>
         <li>
-        <div class="label"><?php the_category( ' ' ); ?></div>
         <div class="article">
             <?php the_post_thumbnail( 'full', printf( '<a href="%s">', get_permalink() ), '</a>' ); ?>
-            <time><?php the_time( get_option( 'date_format' ) . ' ' . get_option( 'time_format' ) ); ?></time>
             <?php the_title( sprintf( '<a href="%s"><h2>', get_permalink() ), '</h2></a>' ); ?>
+            <?php the_excerpt(); ?>
         </div>
         </li>
     <?php endwhile;
