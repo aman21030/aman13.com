@@ -28,10 +28,13 @@ function theme_scripts() {
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
+	wp_enqueue_script( 'theme-script', get_template_directory_uri() . '/js/script.js', array( 'jquery' ), $version, true );
 }
 function theme_styles( $version ) {
 	wp_enqueue_style( 'theme-reset', get_template_directory_uri() . '/reset.css', array(), $version );
 	wp_enqueue_style( 'theme-style', get_stylesheet_uri(), array( 'theme-reset' ), $version );
+	// WordPress Dash Icon.
+	wp_enqueue_style( 'dashicons' );
 }
 add_action( 'wp_enqueue_scripts', 'theme_scripts' );
 

@@ -14,7 +14,15 @@ if ( have_posts() ) :
     while ( have_posts() ) : the_post(); ?>
         <li>
         <div class="article">
-            <?php the_post_thumbnail( 'full', printf( '<a href="%s">', get_permalink() ), '</a>' ); ?>
+            <?php
+                if ( has_post_thumbnail() ) :
+                    the_post_thumbnail( 'full', printf( '<a href="%s">', get_permalink() ), '</a>' );
+                else :
+                    echo '<a href="' . get_permalink() . '">';
+                    echo '<img src="' . get_template_directory_uri() . '/img/default.png" alt="' . get_the_title() . '">';
+                    echo '</a>';
+                endif;
+            ?>
             <?php the_title( sprintf( '<a href="%s"><h2>', get_permalink() ), '</h2></a>' ); ?>
             <?php the_excerpt(); ?>
         </div>
