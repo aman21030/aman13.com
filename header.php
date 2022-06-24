@@ -36,6 +36,5 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <nav class="nav-breadcrumb">
 	<?php echo do_shortcode( '[wp-structuring-markup-breadcrumb]' ); ?>
 </nav>
-<div class="l-wrapper">
-	<?php get_sidebar( 'sidebar-1' ); ?>
+<div class="content">
 	<main>

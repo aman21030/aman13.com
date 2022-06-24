@@ -37,11 +37,10 @@ header input[type="submit"] {
     display: inline-block;
     padding: 10px;
 }
-.nav-global,.nav-breadcrumb,.l-wrapper {
+.nav-global,.nav-breadcrumb,.content {
     margin: 0 auto;
     width: 1000px;
 }
-
 .nav-global ul {
     display: flex;
     justify-content: space-around;
@@ -66,7 +65,7 @@ header input[type="submit"] {
     padding: 0;
 }
 
-.l-wrapper {
+.content {
     display: flex;
     justify-content: space-between;
 }
@@ -89,15 +88,22 @@ header input[type="submit"] {
     margin-left: 2rem;
     margin-right: 2rem;
 }
+
+.r-wrapper {
+    width: 240px;
+}
 #sidebar {
-    width: 25%;
+    margin-top: 40px;
 }
 #sidebar ul {
     list-style: none;
+    padding: 0;
+}
+#sidebar .children {
+    padding-left: 30px;
 }
 li.widget {
-    border: #223a70 solid 1px;
-    border-radius: 5px;
+    background-color: #f7F8FF;
     margin: 10px 0;
     padding: 5px 20px;
 }
@@ -109,13 +115,21 @@ li.widget {
     text-decoration: none;
 }
 main {
-    margin: 20px;
-    width: 70%;
+    margin-right: 10px;
+    width: 740px;
+}
+.home-main {
+    padding-bottom: 50px;
+}
+.articles-title {
+    padding-top: 20px;
+    padding-left: 20px;
 }
 .home-main ul {
     flex-wrap: wrap;
     display: flex;
     padding: 0;
+    margin-top: 20px;
     width: 100%;
 }
 .home-main li {
@@ -123,10 +137,12 @@ main {
     height: auto;
     margin: 20px 10px;
     min-height: 200px;
+    position: relative;
     width: 30%;
 }
 .home-main h2 {
     font-size: 16px;
+    word-break: break-word;
 }
 .article a {
     color: #223a70;
@@ -135,22 +151,36 @@ main {
 .home-main img {
     display: block;
     height: auto;
-    margin: 0 auto;
-    width: 95%;
+    width: 100%;
 }
-.home-main label.category{
-    font-size: 20px;
-    padding: 3px 5px;
+.home-main .label {
+    display: flex;
+    position: absolute;
+    text-align: center;
 }
 .home-main .label a {
-    background-color: cornflowerblue;
-    border-radius: 10px;
-    color: azure;
-    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.5);
+    color: #223a70;
+    display: block;
+    font-size: 12px;
     margin: 2px 2px;
-    padding: 3px 5px;
+    padding: 4px 6px;
     text-decoration: none;
     width: auto;
+}
+.article {
+    background-color: #fff;
+    box-shadow: 0 1px 2px #aaa;
+}
+.article:hover {
+    box-shadow: 0 2px 4px #aaa;
+    transform: translate(0, -10px);
+    transition: .3s ease-in-out;
+}
+.article time {
+    font-size: 10px;
+    display: block;
+    text-align: right;
 }
 .nav-links {
     text-align: center;
