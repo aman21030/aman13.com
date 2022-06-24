@@ -1,4 +1,7 @@
-</main>
+    </main>
+    <div class="r-wrapper">
+        <?php get_sidebar( 'sidebar-1' ); ?>
+    </div>
 </div>
 <footer>
     <div class="icon-area">
