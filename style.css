@@ -254,3 +254,99 @@ footer p {
     justify-content: center;
     width: 50px;
    }
+.single-article {
+    margin-top: 50px;
+    width: 740px;
+}
+.single-article img {
+    max-width: 740px!important;
+}
+.article-time {
+    font-size: 12px;
+}
+.comments {
+    background-color: #f7F8FF;
+    padding: 10px;
+}
+.comments input[type="text"] {
+    border: #223a70 solid 1px;
+    background-color: #FFF;
+    display: inline-block;
+    padding: 6px 10px 6px 10px;
+}
+.comments textarea {
+    border: #223a70 solid 1px;
+    background-color: #FFF;
+    display: inline-block;
+    padding: 6px 10px 6px 10px;
+}
+.comments input[type="submit"] {
+    background-color: #223a70;
+    color: azure;
+    cursor: pointer;
+    display: inline-block;
+    padding: 6px;
+}
+
+
+
+@media screen and (max-width: 480px) {
+
+    header {
+        display: block;
+        width: 100%;
+    }
+    header img {
+        height: 100%;
+        margin: 10px auto;
+        width: 100%;
+    }
+    header input[type="text"] {
+        display: inline-block;
+        margin-left: 6px;
+        padding: 6px 8px 6px 10px;
+        width: 70%;
+    }
+    header input[type="submit"] {
+        display: inline-block;
+        padding: 4px;
+    }
+    .nav-global,.nav-breadcrumb,.content {
+        width: 100%;
+    }
+    .content {
+        display: block;
+    }
+    .home-main li {
+        display: block;
+        height: auto;
+        margin: 20px 10px;
+        min-height: 100px;
+        position: relative;
+        width: 100%;
+    }
+    main {
+        margin: 0 auto;
+        width: 100%;
+    }
+    .home-main img {
+        max-width: 100%;
+    }
+    .r-wrapper {
+        margin: auto;
+        width: 80%;
+    }
+    .icon-area {
+        padding: 0 20%;
+    }
+    .footer-icon {
+        font-size: 20px;
+    }
+    footer {
+        width: 100%;
+    }
+    footer p {
+        font-size: 10px;
+        padding: 10px;
+    }
+}
