@@ -24,11 +24,11 @@ h1 {
     margin: 0;
 }
 
-header input[type="text"] {
+header input[type="search"] {
     border: #223a70 solid 1px;
     background-color: #FFF;
     display: inline-block;
-    padding: 12px 20px 12px 20px;
+    padding: 12px 20px 12px 30px;
 }
 header input[type="submit"] {
     background-color: #223a70;
@@ -36,6 +36,10 @@ header input[type="submit"] {
     cursor: pointer;
     display: inline-block;
     padding: 10px;
+}
+.site-search {
+    background: url(./img/search.svg) no-repeat 10px center;
+    background-size: 15px 15px;
 }
 .nav-global,.nav-breadcrumb,.content {
     margin: 0 auto;
@@ -113,6 +117,12 @@ li.widget {
 .wp-widget-group__inner-blocks a {
     color: #223a70;
     text-decoration: none;
+}
+.widgettitle {
+    cursor: pointer;
+}
+.widgettitle + div {
+    display: none;
 }
 main {
     margin-right: 10px;
@@ -210,6 +220,7 @@ a.page-numbers {
 
 footer {
     background-color: #223a70;
+    margin-top: 30px;
     padding-top: 10px;
 }
 .icon-area {
@@ -301,7 +312,7 @@ footer p {
         margin: 10px auto;
         width: 100%;
     }
-    header input[type="text"] {
+    header input[type="search"] {
         display: inline-block;
         margin-left: 6px;
         padding: 6px 8px 6px 10px;
