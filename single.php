@@ -8,7 +8,9 @@ if ( have_posts() ) : ?>
     <div class="article-time">投稿日<time><?php the_time( get_option( 'date_format' ) . ' ' . get_option( 'time_format' ) ); ?></time></div>
     <div class="article-time">更新日<time><?php the_modified_date( get_option( 'date_format' ) . ' ' . get_option( 'time_format' ) ); ?></time></div>
     <p><?php the_author(); ?></p>
-    <?php the_content(); ?>
+    <div class="the-content">
+        <?php the_content(); ?>
+    </div>
     </article>
 <?php endif; ?>
 
@@ -29,9 +31,13 @@ if ( have_posts() ) : ?>
 </div>
 <?php 
 echo '<div class="pagenation">';
-previous_post_link();
+echo '<span class="previos-post-link"><p>前の記事</p>';
+    previous_post_link();
+echo '</span>';
 echo '<span class="pagenation-space"></span>';
-next_post_link();
+echo '<span class="next-post-link"><p>次の記事</p>';
+    next_post_link();
+echo '</span>';
 echo '</div>';
 
 get_footer();

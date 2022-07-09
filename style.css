@@ -81,6 +81,7 @@ header input[type="submit"] {
 }
 .nav-breadcrumb ol {
     display: flex;
+    flex-wrap:wrap;
     list-style: none;
 }
 .nav-breadcrumb li {
@@ -90,7 +91,6 @@ header input[type="submit"] {
     color: inherit;
     display: inline-block;
     font-size: 14px;
-    max-width: 450px;
     margin: auto 0;
     text-decoration: none;
     vertical-align: middle;
@@ -98,8 +98,8 @@ header input[type="submit"] {
 .nav-breadcrumb li + li:before {
     content: ">";
     display: inline-block;
-    margin-left: 2rem;
-    margin-right: 2rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
 }
 
 .r-wrapper {
@@ -196,10 +196,16 @@ main {
     transform: translate(0, -10px);
     transition: .3s ease-in-out;
 }
+.article .label {
+    flex-wrap:wrap;
+}
 .article time {
     font-size: 11px;
     display: block;
     text-align: right;
+}
+.the-content * {
+    overflow-wrap: break-word;
 }
 .nav-links {
     text-align: center;
@@ -217,16 +223,24 @@ a.page-numbers {
     background-color: #445b81;
     color: azure;
 }
+.pagenation {
+    display: flex;
+    justify-content: space-between;
+}
 .pagenation a {
     color: #223a70;
-    font-size: 16px;
-    margin: 5px 10px;
+    font-size: 14px;
     text-decoration: none;
 }
-.pagenation-space {
-    margin: 0 20px;
+.pagenation p {
+    border-bottom: #223a70 2px ridge;
+    font-weight: bold;
 }
-
+.previos-post-link, .next-post-link {
+    background-color: #e7f7ff;
+    margin: 5px;
+    padding: 5px;
+}
 footer {
     background-color: #223a70;
     margin-top: 30px;
@@ -284,7 +298,7 @@ footer p {
     max-width: 740px!important;
 }
 .article-time {
-    font-size: 12px;
+    font-size: 13px;
 }
 .comments {
     background-color: #f7F8FF;
@@ -342,11 +356,11 @@ footer p {
         padding: 2px;
     }
     .nav-breadcrumb ol {
+        flex-wrap:wrap;
         padding: 5px;
     }
     .nav-breadcrumb li a {
         font-size: 12px;
-        max-width: 120px;
     }
     .nav-breadcrumb li + li:before {
         margin-left: 0.5rem;
@@ -378,6 +392,25 @@ footer p {
     }
     .single-article img {
         max-width: 100%!important;
+    }
+    .pagenation {
+        background-color: #e7f7ff;
+        display: block;
+    }
+    .previos-post-link, .next-post-link {
+        margin: 0;
+        padding: 0;
+    }
+    .pagenation p {
+        padding: 2px;
+        margin: 0;
+        width: 4.5rem;
+    }
+    .pagenation-space {
+        background-color: #fff;
+        display: block;
+        height: 5px;
+        width: 100%;
     }
     .r-wrapper {
         margin: auto;
