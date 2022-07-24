@@ -253,11 +253,14 @@ footer {
     padding: 0 20%;
     text-align: center;
 }
-.footer-icon {
+span.dashicons {
     font-size: 40px;
+    height: 40px;
+    width: 40px;
 }
 footer a {
     color: azure;
+    text-decoration: none;
 }
 footer p {
     color: azure;
