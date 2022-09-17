@@ -5,10 +5,13 @@
 </div>
 <footer>
     <div class="icon-area">
+        <?php 
+            $sns = get_option( 'dashicons_list_view' );
+        ?>
         <div>
-        <a href="https://twitter.com/aman901030">
-            <span class="dashicons dashicons-twitter footer-icon"></span>
-            <p>@aman901030</p>
+        <a href="https://twitter.com/<?php echo $sns['twitter_account']; ?>">
+            <span class="dashicons dashicons-twitter footer-icon" style="color:<?php echo $sns['twitter_color']; ?>;"></span>
+            <p><?php echo $sns['twitter_account']; ?></p>
         </a>
         </div>
         <div>
