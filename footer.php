@@ -9,21 +9,21 @@
             $sns = get_option( 'dashicons_list_view' );
         ?>
         <div>
-        <a href="https://twitter.com/<?php echo $sns['twitter_account']; ?>">
+        <a href="https://twitter.com/<?php echo $sns['twitter_account']; ?>" target="_blank">
             <span class="dashicons dashicons-twitter footer-icon" style="color:<?php echo $sns['twitter_color']; ?>;"></span>
-            <p><?php echo $sns['twitter_account']; ?></p>
+            <span style="color:<?php echo $sns['twitter_color']; ?>;"><?php echo $sns['twitter_account']; ?></span>
         </a>
         </div>
         <div>
-        <a href="https://www.facebook.com/tomomi.aman">
-            <span class="dashicons dashicons-facebook footer-icon"></span>
-            <p>tomomi.aman</p>
+        <a href="https://www.facebook.com/<?php echo $sns['facebook_account']; ?>" target="_blank">
+            <span class="dashicons dashicons-facebook footer-icon" style="color:<?php echo $sns['facebook_color']; ?>;"></span>
+            <span style="color:<?php echo $sns['facebook_color']; ?>;"><?php echo $sns['facebook_account']; ?></span>
         </a>
         </div>
         <div>
-        <a href="https://www.instagram.com/aman901030/?hl=ja">
-            <span class="dashicons dashicons-instagram footer-icon"></span>
-            <p>aman901030</p>
+        <a href="https://www.instagram.com/<?php echo $sns['instagram_account']; ?>" target="_blank">
+            <span class="dashicons dashicons-instagram footer-icon" style="color:<?php echo $sns['instagram_color']; ?>;"></span>
+            <span style="color:<?php echo $sns['instagram_color']; ?>;"><?php echo $sns['instagram_account']; ?></span>
         </a>
         </div>
     </div>
