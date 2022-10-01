@@ -64,3 +64,11 @@ function theme_search_mark( $str ) {
 }
 add_action( 'the_title', 'theme_search_mark' );
 add_action( 'the_excerpt', 'theme_search_mark' );
+
+//ショートコードの作り方
+// function theme_short_code( $args ) {
+// 	var_dump($args);
+// 	$html = '(´・ω・｀)'.$args['kind'];
+// 	return $html;
+// }
+// add_shortcode('kao', 'theme_short_code');
